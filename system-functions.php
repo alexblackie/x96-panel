@@ -150,7 +150,7 @@ require "config.php"; // Require to have DB connection info
 		} //end while
 	} //end function
 	function x96_head(){
-		//Outputs generator meta tag and syndication
+		//Outputs generator meta tag and edit uri
 ?>
 <meta name="generator" content="X96 Panel <?php echo version_num(); ?> (http://cms.x96design.com/)" />
 
