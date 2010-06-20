@@ -154,7 +154,6 @@ require "config.php"; // Require to have DB connection info
 ?>
 <meta name="generator" content="X96 Panel <?php echo version_num(); ?> (http://cms.x96design.com/)" />
 
-<link rel="alternate" type="application/rss+xml" title="<?php sitename(); ?> &mdash; RSS Feed" href="<?php echo siteurl(); ?>/feed.php" />
 <link rel="edit" title="Edit URI" href="<?php echo siteurl(); ?>/admin/index.php?action=pages&edit=<?php echo $_GET['page']; ?>" />
 <?php
 	} //end function
