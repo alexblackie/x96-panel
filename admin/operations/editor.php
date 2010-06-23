@@ -47,7 +47,14 @@
 </div><!-- /operationsbox -->
 <div class="rapops">
 	<input type="text" value="<?php filename(); ?>" name="edit-title" tabindex="1" style="font-size:25px; width:500px; display:block;" />
-	<input type="text" value="<?php echo $_GET['edit']; ?>" name="sluggeroo" tabindex="2" style="display:inline-block; width:100px;" <?php if($_GET['edit'] == "home"){ echo "disabled"; } ?> />&lsaquo; URL of page<br/>
+	<?php if($_GET['edit'] == "home"){
+		echo 'You cannot edit the URL of the homepage.<br/>';
+	}
+	else{ ?>
+	<input type="text" value="<?php echo $_GET['edit']; ?>" name="sluggeroo" tabindex="2" style="display:inline-block; width:100px;" />&lsaquo; URL of page<br/>
+	<?php
+		}
+	?>
 <br/>
 	<textarea id="richEditor" class="richEditor" name="editor1" style="height: 370px; width: 100%;" tabindex="3"><?php page_content(); ?></textarea>
 </form>
