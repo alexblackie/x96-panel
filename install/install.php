@@ -1,7 +1,5 @@
 <?php
 	if(isset($_GET['upgrade'])){
-		require "../config.php";
-		mysql_query("INSERT INTO ".tableprefix()."system VALUES('editor', '1')");
 		echo "<script>window.location=\"finished.php?upgrade\";</script>";
 	}
 ?>
