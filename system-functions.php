@@ -142,8 +142,6 @@ require "config.php"; // Require to have DB connection info
 		//Outputs generator meta tag and syndication
 ?>
 <meta name="generator" content="X96 Panel <?php echo version_num(); ?> (http://cms.x96design.com/)" />
-
-<link rel="edit" title="Edit URI" href="<?php echo siteurl(); ?>/admin/index.php?action=pages&edit=<?php echo $_GET['page']; ?>" />
 <?php
 	} //end function
 	function admin_link(){
