@@ -5,7 +5,7 @@
 	$getname = $_POST['prefix']; //DB prefix
 	$returnprefix = str_replace($fooarray, "_", $getname); //Filtered Prefix (filtered thrugh $fooarray
 	
-	$posturl = $_POST['url']; //site URL
+	$posturl = "/".$_POST['url']; //site URL
 	
 	$host = $_POST['server']; //MySQL Server
 	$user = $_POST['user']; //DB User
@@ -31,7 +31,7 @@
 fclose($ourFileHandle); //close
 	$ourFileName = "../.htaccess"; //Creating server config (rewrite)
 	$ourFileHandle = fopen($ourFileName, 'w') or die("<tt>.htaccess</tt> could not be created in the parent directory!"); //attempt to write
-	$stringData = "\n## Start X96 Panel ##\nRewriteEngine on\nRewriteCond %{REQUEST_URI} !(\.[^./]+)$\nRewriteCond %{REQUEST_fileNAME} !-d\nRewriteCond %{REQUEST_fileNAME} !-f\nRewriteRule (.*) /$posturl/?page=$1 [L]\nRewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /$posturl/([^?]+\?)+page=\ HTTP\nRewriteRule ^(.+)\?page=$ /$posturl/$1 [R=301,L]\n## End X96 Panel ##"; //.htaccess data
+	$stringData = "\n## Start X96 Panel ##\nRewriteEngine on\nRewriteCond %{REQUEST_URI} !(\.[^./]+)$\nRewriteCond %{REQUEST_fileNAME} !-d\nRewriteCond %{REQUEST_fileNAME} !-f\nRewriteRule (.*) $posturl/?page=$1 [L]\nRewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ $posturl/([^?]+\?)+page=\ HTTP\nRewriteRule ^(.+)\?page=$ $posturl/$1 [R=301,L]\n## End X96 Panel ##"; //.htaccess data
 	fwrite($ourFileHandle, $stringData);//write
 	fclose($ourFileHandle); //close
 	chmod("../config.php", 0666); //change permissions of file
@@ -45,9 +45,9 @@ fclose($ourFileHandle); //close
 	mysql_query("INSERT INTO `".$prefix."pages` (`title`, `content`, `last_mod`, `slug` , `order`) VALUES
 ('Home', '<p><strong>You have now successfully installed X96 Panel!</strong></p><h3>Edit this Content</h3><p><strong>Jump right into it</strong> and start editing this page and adding new ones. To get started, <a href=\"admin/\">Log in</a>!</p><h3>Get up to Speed</h3><p><strong>Read the documentation</strong> to get yourself familiar with X96 Panel. <a href=\"http://cms.x96design.com/docs\">Read the Docs &raquo;</a></p><h3>Need Help?</h3><p><strong>Need some help </strong>with X96 Panel? Post in <a href=\"http://cms.x96design.com/help/\">the support forums</a> to get an answer to your question.</p><p>&nbsp;</p>', CURRENT_TIMESTAMP, 'home', '1')");
 	mysql_query("CREATE TABLE IF NOT EXISTS `".$prefix."system` (`function` mediumtext NOT NULL, `value` text NOT NULL)");
-	mysql_query("INSERT INTO `".$prefix."system` (`function`, `value`) VALUES('title', '$sitename'),('desc', 'Describe Your Site Here. This will show up in Search results under your site name.'),('footer', '<p>(C) 2010. All Rights Reserved.</p>'),('theme', 'default'),('url', '/".$posturl."'),('editor', '1');");
+	mysql_query("INSERT INTO `".$prefix."system` (`function`, `value`) VALUES('title', '$sitename'),('desc', 'Describe Your Site Here. If your theme supports it, this will show up in search results under your site name.'),('footer', '<p>(C) 2010. All Rights Reserved.</p>'),('theme', 'default'),('url', '$posturl'),('editor', '1');");
 	mysql_query("INSERT INTO ".$prefix."system VALUES('analytics', '0')");
-	mysql_query("INSERT INTO ".$prefix."system VALUES('analytics_code', 'UA-000000-0')");
+	mysql_query("INSERT INTO ".$prefix."system VALUES('analytics_code', 'UA-000000-00')");
 	
 	// Did it work? Redirect to "finished" page.
 	
