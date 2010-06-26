@@ -39,7 +39,7 @@ require "config.php"; // Require to have DB connection info
 		}
 	}
 	function version_num() { //set version number of this release
-		return "1.0";
+		return "1.0.2";
 	}
 	function sitename(){ //Echo site name
 		$sql3 = mysql_query("SELECT * FROM ".tableprefix()."system WHERE `function`='title'");
