@@ -2,7 +2,7 @@
 	if(isset($_POST['subupdate'])){ //Has the form been submitted?
 		$title = $_POST['edit-title'];
 		$content = $_POST['editor1'];
-		$slug = $_POST['sluggeroo'];
+		$slug = $_POST['slug'];
 		$slugget = $_GET['edit'];
 		$ordernum = $_POST['order'];
 		mysql_query("DELETE FROM ".tableprefix()."pages WHERE `slug`='$slugget'"); //delete old row
@@ -48,10 +48,10 @@
 <div class="rapops">
 	<input type="text" value="<?php filename(); ?>" name="edit-title" tabindex="1" style="font-size:25px; width:500px; display:block;" />
 	<?php if($_GET['edit'] == "home"){
-		echo 'You cannot edit the URL of the homepage.<br/>';
+		echo '<input type="hidden" value="home" name="slug" />You cannot edit the URL of the homepage.<br/>';
 	}
 	else{ ?>
-	<input type="text" value="<?php echo $_GET['edit']; ?>" name="sluggeroo" tabindex="2" style="display:inline-block; width:100px;" />&lsaquo; URL of page<br/>
+	<input type="text" value="<?php echo $_GET['edit']; ?>" name="slug" tabindex="2" style="display:inline-block; width:100px;" />&lsaquo; URL of page<br/>
 	<?php
 		}
 	?>
