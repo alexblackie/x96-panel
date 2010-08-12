@@ -20,7 +20,7 @@
 	
 	// Set the base directory (the directory the app is located in, relative to
 	// the website domain's root) Ex: /mysite/
-	define("APP_BASEDIR", "/x96cms/");
+	define("APP_BASEDIR", "/x96cms/trunk/");
 	
 	############################ Stop Editing Now ############################
 	
