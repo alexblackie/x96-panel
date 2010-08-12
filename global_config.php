@@ -42,3 +42,4 @@
 	
 	// Require that we have the functions so we can actually do stuff with the app.
 	require "system/functions.php";
+?>
