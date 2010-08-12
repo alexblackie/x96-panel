@@ -18,6 +18,10 @@
 	// The name of the database.
 	define("APP_DB_NAME", "x96cms");
 	
+	// Set the base directory (the directory the app is located in, relative to
+	// the website domain's root) Ex: /mysite/
+	define("APP_BASEDIR", "/x96cms/");
+	
 	############################ Stop Editing Now ############################
 	
 	// Now to connect to the database...
