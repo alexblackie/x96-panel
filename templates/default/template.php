@@ -8,16 +8,21 @@
 	</head>
 	
 	<body>
-	
+		<div class="header">
+			<div class="container">
+				<h1><?php echo getInfo('sitename'); ?></h1>
+				<div class="nav">
+					<ul>
+						<?php listpages('10'); ?>
+					</ul>
+				</div><!-- end .nav -->
+			</div><!-- end .container -->
+		</div><!-- end .header -->
 		<div class="wrapper">
-			<h1><?php echo getInfo('sitename'); ?></h1>
-			<div class="nav">
-				<ul>
-					<?php listpages('10'); ?>
-				</ul>
-			</div><!-- end .nav -->
-			<h2><?php content("title"); ?></h2>
-			<?php content("body"); ?>		
+			<h2 class="pagetitle"><span><?php content("title"); ?></span></h2>
+			<div class="content">
+<?php content("body"); ?>
+			</div><!-- end .content -->
 		</div><!-- end .wrapper -->
 	
 	</body>
