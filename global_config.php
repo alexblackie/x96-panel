@@ -17,3 +17,9 @@
 	// Set the database name
 	// The name of the database.
 	define("APP_DB_NAME", "x96cms");
+	
+	// Now to connect to the database...
+	mysql_connect(APP_DB_HOST, APP_DB_USER, APP_DB_PASS);
+	
+	// Now to select the database...
+	mysql_select_db(APP_DB_NAME);
