@@ -35,10 +35,10 @@
 	############################ Stop Editing Now ############################
 	
 	// Now to connect to the database...
-	mysql_connect(APP_DB_HOST, APP_DB_USER, APP_DB_PASS);
+	mysql_connect(APP_DB_HOST, APP_DB_USER, APP_DB_PASS) or die("<h1>Error Connecting to Database!</h1><p>Make sure the credentials are correct in the <code>global_config.php</code> file.</p>");
 	
 	// Now to select the database...
-	mysql_select_db(APP_DB_NAME);
+	mysql_select_db(APP_DB_NAME) or die("<h1>Error Connecting to Database!</h1><p>Make sure the database name is correct in the <code>global_config.php</code> file.</p>");;
 	
 	// Require that we have the functions so we can actually do stuff with the app.
-	require APP_FULLPATH . "system/functions.php";
+	require "system/functions.php";
