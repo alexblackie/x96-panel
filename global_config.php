@@ -27,6 +27,10 @@
 	// the website domain's root) Ex: /mysite/
 	define("APP_BASEDIR", "/x96cms/trunk/");
 	
+	// Set the index page
+	// Don't change unless you renamed 'index.php'
+	define("APP_INDEX", "index.php");
+	
 	// Set the absolute path.
 	// The absolute server path to the directory.
 	// Example: /var/www/mysite/
