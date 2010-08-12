@@ -8,3 +8,4 @@
 	
 	// Start loading theme:
 	load_theme();
+?>
