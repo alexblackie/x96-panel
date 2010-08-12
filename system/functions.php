@@ -16,6 +16,9 @@
 		// Probably the most important function in the entire program. This
 		// function loads the current theme.
 	
-		require(APP_BASEDIR . "templates/" . getInfo('current_theme') . "/template.php") or die("<h1>Loading the Template Failed.</h1><p>X96 CMS Could not load the template. This could mean that the template file doesn't exist.</p>");
+		$currentTheme = getInfo('current_theme');
+	
+		require APP_FULLPATH . "templates/" . $currentTheme . "/template.php";
 			
 	}
+?>
