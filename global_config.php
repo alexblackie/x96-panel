@@ -41,5 +41,5 @@
 	mysql_select_db(APP_DB_NAME) or die("<h1>Error Connecting to Database!</h1><p>Make sure the database name is correct in the <code>global_config.php</code> file.</p>");;
 	
 	// Require that we have the functions so we can actually do stuff with the app.
-	require "system/functions.php";
+	require APP_FULLPATH . "system/functions.php";
 ?>
