@@ -10,10 +10,14 @@
 	<body>
 	
 		<div class="wrapper">
-		
-			<?php
-				pageContent();
-			?>		
+			<h1><?php echo getInfo('sitename'); ?></h1>
+			<div class="nav">
+				<ul>
+					<?php listpages('10'); ?>
+				</ul>
+			</div><!-- end .nav -->
+			<h2><?php content("title"); ?></h2>
+			<?php content("body"); ?>		
 		</div><!-- end .wrapper -->
 	
 	</body>
