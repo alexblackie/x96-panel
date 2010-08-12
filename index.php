@@ -4,7 +4,7 @@
 	// responsible for loading the theme and configuration options.
 	
 	// Load global config file:
-	require_once "global_config.php";
+	require "global_config.php";
 	
 	// Start loading theme:
 	load_theme();
