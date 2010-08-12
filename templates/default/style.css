@@ -1,0 +1,89 @@
+/*** Resets ***/
+* {
+	margin:0;
+	padding:0;
+}
+section, article, nav, header, footer, aside {
+	display:block;
+}
+
+/*** Global ***/
+body {
+	background:#fff;
+	color:#000;
+	font:normal 16px/28px Georgia, Times, serif;
+}
+a, a:link, a:visited {
+	color:#ff0000;
+	text-decoration:none;
+}
+a:hover, a:active {
+	color:#000;
+	text-decoration:none;
+}
+ul, ol {
+	margin:10px 0 10px 30px;
+}
+pre {
+	color:#000;
+	font:normal inherit/1.3em "Monaco", "Andale Mono", "Courier New", "Courier", monospace;
+	padding:1.0em;
+	background:#efefef;
+}
+tt, code {
+	background:#efefef;
+	color:#000;
+}
+p {
+	margin:15px 0;
+}
+blockquote {
+	color:#777;
+	font:normal 15px/24px Helvetica, Arial, sans-serif;
+	border-left:3px solid #ddd;
+	padding:5px 15px;
+	margin:10px 20px;
+}
+fieldset {
+	border:none;
+}
+input[type=text], input[type=password], textarea {
+	color:#666;
+	font-family:Helvetica, Arial, sans-serif;
+	font-size:18px;
+	padding:3px;
+	border:1px solid #ccc;
+	background:#fff url(images/input.png) repeat-x scroll top left;
+}
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+	border-color:#898989;
+	color:#000;
+}
+a img {
+	border:none;
+}
+
+
+/*** Layout ***/
+.wrapper {
+	width:900px;
+	margin:0 auto;
+}
+
+
+/*** Miscellaneous ***/
+.alignleft {
+	float:left;
+}
+.alignright {
+	float:right;
+}
+.left {
+	text-align:left;
+}
+.center {
+	text-align:center;
+}
+.right {
+	text-align:right;
+}
