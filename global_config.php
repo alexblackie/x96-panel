@@ -29,3 +29,6 @@
 	
 	// Now to select the database...
 	mysql_select_db(APP_DB_NAME);
+	
+	// Require that we have the functions so we can actually do stuff with the app.
+	require APP_BASEDIR . "system/functions.php";
