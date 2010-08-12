@@ -18,6 +18,11 @@
 	// The name of the database.
 	define("APP_DB_NAME", "x96cms");
 	
+	// Set the database table prefix
+	// For multiple installs on a single DB.
+	// Example: 'test_' would make the table names like 'test_pages'
+	define("APP_TABLEPREFIX", "dev_");
+	
 	// Set the base directory (the directory the app is located in, relative to
 	// the website domain's root) Ex: /mysite/
 	define("APP_BASEDIR", "/x96cms/trunk/");
