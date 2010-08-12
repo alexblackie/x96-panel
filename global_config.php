@@ -27,6 +27,11 @@
 	// the website domain's root) Ex: /mysite/
 	define("APP_BASEDIR", "/x96cms/trunk/");
 	
+	// Set the absolute path.
+	// The absolute server path to the directory.
+	// Example: /var/www/mysite/
+	define("APP_FULLPATH", "/var/www/public_html/x96cms/trunk/");
+	
 	############################ Stop Editing Now ############################
 	
 	// Now to connect to the database...
