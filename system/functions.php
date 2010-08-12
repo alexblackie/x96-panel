@@ -21,4 +21,22 @@
 		require APP_FULLPATH . "templates/" . $currentTheme . "/template.php";
 			
 	}
+	
+	function pageContent() {
+		// Gets the page content from the database.
+		
+		// If nothing is after index.php, it's the homepage.
+		$uri = $_SERVER["PATH_INFO"];
+		if(!$uri) {
+			$uri = "/home";
+		}
+		
+		// Trim off the starting forward slash
+		$uri = substr($uri, 1);
+		
+		$sql = mysql_query("SELECT * FROM " . APP_TABLEPREFIX . "pages WHERE `slug` = '$uri' LIMIT 1");
+		while($row = mysql_fetch_array($sql)) {
+			echo $row[3];
+		}
+	}
 ?>
