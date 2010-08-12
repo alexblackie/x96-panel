@@ -64,7 +64,7 @@
 		$sql = mysql_query("SELECT * FROM " . APP_TABLEPREFIX . "pages LIMIT " . $limit) or die("<h1>Could not List Pages</h1><p>Something went wrong… Are you you entered ONLY a number in the function (like <code>listpages('5')</code>)?</p>");
 		while($row = mysql_fetch_array($sql)) {
 ?>
-	<li class="menu-item pageid<?php echo $row[0]; ?> <?php echo $row[2]; ?>"><a href="<?php echo APP_BASEDIR; ?><?php echo APP_INDEX; ?>/<?php echo $row[2]; ?>"><?php echo $row[1]; ?></a></li>
+	<li class="menu-item pageid<?php echo $row[0]; ?> <?php echo $row[2]; ?> <?php if($uri == $row[2]): ?>current-page<?php endif; ?>"><a href="<?php echo APP_BASEDIR; ?><?php echo APP_INDEX; ?>/<?php echo $row[2]; ?>"><?php echo $row[1]; ?></a></li>
 <?php
 		}
 	}
