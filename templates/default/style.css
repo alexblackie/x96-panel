@@ -9,16 +9,16 @@ section, article, nav, header, footer, aside {
 
 /*** Global ***/
 body {
-	background:#fff;
+	background:#e8e8e8;
 	color:#000;
-	font:normal 16px/28px Georgia, Times, serif;
+	font:normal 16px/28px sans-serif;
 }
 a, a:link, a:visited {
-	color:#ff0000;
+	color:#0088ff;
 	text-decoration:none;
 }
 a:hover, a:active {
-	color:#000;
+	color:#0059af;
 	text-decoration:none;
 }
 ul, ol {
@@ -65,9 +65,62 @@ a img {
 
 
 /*** Layout ***/
-.wrapper {
-	width:900px;
+.wrapper, .container {
+	width:800px;
 	margin:0 auto;
+	position:relative;
+}
+.wrapper {
+	background:#fff;
+	padding-top:15px;
+}
+.header {
+	background:#D31E01 url(images/header.jpg) repeat-x scroll 0 0;
+	height:120px;
+	border-bottom:1px solid #B50802;
+	position:relative;
+}
+.header .container {
+	height:120px;
+}
+.header h1 {
+	color:#fff;
+	margin:0 auto;
+	font:bold 50px/80px sans-serif;
+	width:800px;
+}
+.content {
+	padding:15px;
+}
+
+
+/*** Main Navigation ***/
+.nav {
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+}
+.nav ul {
+	margin:0 auto;
+	width:800px;
+	list-style:none;
+}
+.nav ul li {
+	display:inline-block;
+}
+.nav ul li a {
+	color:#fff;
+	text-decoration:none;
+	font:normal 14px/30px sans-serif;
+	display:inline-block;
+	height:30px;
+	padding:0 25px;
+	border-right:1px solid #B50802;
+}
+.nav ul li a:hover {
+	color:#fff;
+	text-decoration:underline;
 }
 
 
@@ -86,4 +139,18 @@ a img {
 }
 .right {
 	text-align:right;
+}
+.pagetitle {
+	background:transparent url(images/heading.png) no-repeat scroll bottom left;
+	height:70px;
+	width:400px;
+	margin-left:-15px;
+	color:#fff;
+	font:bold 30px/55px sans-serif;
+	text-indent:35px;
+}
+.pagetitle span {
+	display:block;
+	background:#D31E01;
+	height:55px;
 }
