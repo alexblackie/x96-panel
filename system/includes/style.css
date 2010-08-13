@@ -1,106 +1,115 @@
-/*** Resets ***/
+@import "http://code.google.com/webfonts/css?family=Droid+Sans";
+
 * {
 	margin:0;
 	padding:0;
 }
-section, article, nav, header, footer, aside {
-	display:block;
-}
 
-/*** Global ***/
 body {
-	background:#fff;
-	color:#000;
-	font:normal 16px/28px sans-serif;
+	background:#e0e0e0;
+	padding:1em;
+	font-family:"Droid Sans", sans-serif;
 }
-a, a:link, a:visited {
-	color:#367d94;
+a {
+	color:#669933;
 	text-decoration:none;
 }
-a:hover, a:active {
-	color:#367d94;
+a:hover {
+	color:#000;
 	text-decoration:underline;
 }
-ul, ol {
-	margin:10px 0 10px 30px;
-}
-pre {
-	color:#000;
-	font:normal inherit/1.3em "Monaco", "Andale Mono", "Courier New", "Courier", monospace;
-	padding:1.0em;
-	background:#efefef;
-}
-tt, code {
-	background:#efefef;
-	color:#000;
+fieldset {
+	border:none;
+	padding:15px;
 }
 p {
 	margin:15px 0;
 }
-blockquote {
-	color:#777;
-	font:normal 15px/24px Helvetica, Arial, sans-serif;
-	border-left:3px solid #ddd;
-	padding:5px 15px;
-	margin:10px 20px;
-}
-fieldset {
-	border:none;
-}
 input[type=text], input[type=password], textarea {
-	color:#666;
-	font-family:Helvetica, Arial, sans-serif;
-	font-size:18px;
-	padding:3px;
-	border:1px solid #ccc;
-	background:#fff url(images/input.png) repeat-x scroll top left;
+	display:block;
+	width:375px;
+	font-size:135%;
+	padding:5px;
+	font-family:"Droid Sans", sans-serif;
+	overflow:hidden;
 }
-input[type=text]:focus, input[type=password]:focus, textarea:focus {
-	border-color:#898989;
-	color:#000;
+input[type=text], input[type=password] {
+	margin-bottom:10px;
 }
-a img {
-	border:none;
+textarea {
+	width:380px;
 }
-
-
-/*** Layout ***/
+.button, a.button {
+	cursor:pointer;
+	display:inline-block;
+	background:#669933 url(images/button-bg.jpg) repeat-x scroll 0 0;
+	color:#fff;
+	text-decoration:none;
+	height:40px;
+	font:bold 14px/40px sans-serif;
+	border:1px solid #55802b;
+	padding:0 45px;
+	text-shadow:1px 1px 1px rgba(0, 0, 0, 0.4);
+}
 .wrapper {
-	width:900px;
+	width:100%;
 	margin:0 auto;
+	background:#fff;
 }
-.login {
-	background:#efefef;
-	border:1px solid #bebebe;
-	padding:20px;
-	width:300px;
-	margin:15% auto;
-	border-radius:15px;
-	-webkit-border-radius:15px;
-	-moz-border-radius:15px;
+.padding {
+	padding:15px;
 }
-.login h2 {
+.header {
+	background:#669933;
+	height:100px;
+	margin-bottom:0;
+	position:relative;
+}
+.header h1 {
+	color:#fff;
+	margin:0;
+	font:bold 40px/100px "Droid Sans", sans-serif;
+	text-indent:15px;
+	text-shadow:1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+.header .links {
+	position:absolute;
+	bottom:0;
+	right:15px;
+}
+.header .links a {
+	color:#fff;
+	padding:0 20px;
+	display:inline-block;
+	height:35px;
+	font:normal 15px/35px "Droid Sans", sans-serif;
+	margin-right:5px;
+}
+.header .links a.current {
+	text-decoration:none;
+	color:#fff;
+	background:#444;
+	-moz-border-radius-topleft:5px;
+	-moz-border-radius-topright:5px;
+	-webkit-border-top-left-radius:5px;
+	-webkit-border-top-right-radius:5px;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;	
+}
+.title {
+	background:#444;
+	color:#fff;
+	padding:15px;
+	font-weight:bold;
+}
+.msg {
+	background:#fffacd;
 	text-align:center;
-	padding:0 0 20px 0;
-}
-.login input[type=text] {
-	margin-bottom:5px;
-}
-
-
-/*** Miscellaneous ***/
-.alignleft {
-	float:left;
-}
-.alignright {
-	float:right;
-}
-.left {
-	text-align:left;
-}
-.center {
-	text-align:center;
-}
-.right {
-	text-align:right;
+	position:absolute;
+	top:0;
+	right:0;
+	left:0;
+	padding:15px;
+	color:#000;
+	border-bottom:2px solid #fff000;
 }
