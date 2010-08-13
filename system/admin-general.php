@@ -36,10 +36,10 @@
 	}
 	else {
 ?>
-					<a href="./manage.php/pages">Pages</a>
-					<a href="./manage.php/theme">Themes</a>
-					<a href="./manage.php/settings">Settings</a>
-					<a href="./logout.php">Log Out</a>
+					<a class="pages" href="./manage.php/pages">Pages</a>
+					<a class="themes" href="./manage.php/theme">Themes</a>
+					<a class="settings" href="./manage.php/settings">Settings</a>
+					<a class="logout" href="./login.php?logout=true">Log Out</a>
 <?php
 	}
 ?>
