@@ -2,7 +2,7 @@
 
 	if(!isset($_SESSION['login'])){
 		// Login session variable not set? Then set it to "not logged in".
-		$_SESSION['login'] = true;
+		$_SESSION['login'] = false;
 	}
 	
 	if($_SESSION['login'] === false) {
