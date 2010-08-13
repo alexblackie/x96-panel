@@ -1,5 +1,12 @@
 <?php
-
+	if(isset($_GET['msg'])) {
+		echo "<div class=\"msg\">";
+		if($_GET['msg'] == "loginfailed") {
+			echo "Login Failed. Please check your username &amp; password.";
+		}
+		echo "</div><!-- end .msg -->";
+	}
+	
 	function loadHead($title, $custom = null){
 		// This function loads everything up to the main content...
 ?>
