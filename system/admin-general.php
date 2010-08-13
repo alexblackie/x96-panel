@@ -28,25 +28,34 @@
 				
 				<div class="links">
 <?php
-	if($custom == "login") {
+		if($custom == "login") {
 ?>
 					<a class="current" href="./login.php">Login</a>
 					<a href="../">Back to Website</a>
 <?php
-	}
-	else {
+		}
+		else {
 ?>
 					<a class="pages" href="./manage.php/pages">Pages</a>
 					<a class="themes" href="./manage.php/theme">Themes</a>
 					<a class="settings" href="./manage.php/settings">Settings</a>
 					<a class="logout" href="./login.php?logout=true">Log Out</a>
 <?php
-	}
+		}
 ?>
 				</div><!-- end .links -->
 
 				
 			</div><!-- end .header -->
 
+<?php
+	}
+	
+	function loadFoot(){
+?>
+		</div><!-- end .wrapper -->
+	</body>
+
+</html>
 <?php
 	}
