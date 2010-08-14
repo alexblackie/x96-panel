@@ -17,23 +17,9 @@
 	require "admin-general.php";
 	
 	if(isset($_POST['submit'])){
-		// If the login form's been submitted
-		
-		// Assign some variables...
-		$user = $_POST['user'];
-		$pass = md5($_POST['pass']);
-		
-		$sql = mysql_query("SELECT * FROM `" . APP_TABLEPREFIX . "users` WHERE `username` LIKE '$user'") or die(mysql_error());
-		
-		while($result = mysql_fetch_array($sql)) {
-			if($user == $result[2] && $pass == $result[3]) {
-				$_SESSION['login'] = true;
-				header("Location: manage.php");
-			}
-			else {
-				header("Location: ?msg=loginfailed");
-			}
-		}
+		// If form was submitted...
+
+
 	}
 	else {
 		// Nothing been submitted?
